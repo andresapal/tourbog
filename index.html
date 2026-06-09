@@ -163,30 +163,32 @@ footer p{font-size:11px;opacity:0.3;line-height:1.9;}
 
 /* LANG TOGGLE */
 .lang-btn{
-  position:fixed;top:1.2rem;right:1.5rem;z-index:999;
-  display:flex;align-items:center;gap:0;
-  background:rgba(10,13,20,0.75);border:0.5px solid rgba(210,185,130,0.4);
-  border-radius:3px;backdrop-filter:blur(8px);overflow:hidden;
-  box-shadow:0 2px 12px rgba(0,0,0,0.4);
+  position:fixed;bottom:1.5rem;right:1.2rem;z-index:1000;
+  display:flex;align-items:center;
+  background:rgba(10,13,20,0.92);
+  border:0.5px solid rgba(200,170,100,0.6);
+  border-radius:3px;overflow:hidden;
+  box-shadow:0 2px 12px rgba(0,0,0,0.6), 0 0 8px rgba(200,170,100,0.15);
 }
 .lang-btn button{
-  padding:7px 14px;font-size:11px;font-weight:600;letter-spacing:0.1em;
+  padding:6px 13px;font-size:11px;font-weight:600;letter-spacing:0.1em;
   border:none;background:transparent;cursor:pointer;
-  font-family:var(--sans);transition:background 0.2s,color 0.2s;color:rgba(210,185,130,0.6);
+  font-family:var(--sans);transition:background 0.2s,color 0.2s;
+  color:rgba(200,170,100,0.8);
 }
 .lang-btn button.active{
   background:linear-gradient(135deg,#c8aa6e,#e8d5a0,#b8963e);
   color:#0a0d14;
 }
-.lang-btn .sep{width:0.5px;background:rgba(210,185,130,0.25);height:28px;}
+.lang-btn .sep{width:0.5px;background:rgba(200,170,100,0.4);height:26px;}
 </style>
 </head>
 <body>
 
 <div class="lang-btn">
-  <button data-lang="es" class="active gl" onclick="setLang('es')">ES</button>
+  <button data-lang="es" class="active" onclick="setLang('es')">ES</button>
   <div class="sep"></div>
-  <button data-lang="en" class="gl" onclick="setLang('en')">EN</button>
+  <button data-lang="en" onclick="setLang('en')">EN</button>
 </div>
 
 <!-- HERO -->
